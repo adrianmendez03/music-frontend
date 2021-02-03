@@ -4,6 +4,8 @@ import Form from '../components/Form'
 
 const Add = (props) => {
 
+    console.log(props)
+
     const { data, url, getData } = props
 
     const emptyArtist = {
@@ -22,12 +24,11 @@ const Add = (props) => {
     const formData = data === "artist" ? emptyArtist : emptyAlbum
 
     const handleCreate = (newData) => {
-        console.log(newData)
-        formData === 'artist' ? (
-            fetch(url + '/artists', {
+        data === 'artist' ? (
+            fetch(url + '/artists/', {
                 method: "post",
                 headers: {
-                    "Content-Type": "applications/json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(newData)
             }).then(() => {
@@ -35,7 +36,7 @@ const Add = (props) => {
                 props.history.push('/')
             })
         ) : (
-            fetch(url + '/albums', {
+            fetch(url + '/albums/', {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json"

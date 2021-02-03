@@ -21,6 +21,9 @@
 #Home .album {
     width: 160px;
     text-align: left;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #fff;
 }
 
 #Home .album .image {
@@ -36,8 +39,25 @@
     font-weight: bold;
 }
 
+#Home .albums-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+#Home .artists-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 #Home .artist {
-    width: 160px;
+    min-width: 160px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #fff;
 }
 
 #Home .artist .image {
@@ -53,5 +73,3 @@
     font-size: 14px;
     margin: 10px 0;
 }
-
-

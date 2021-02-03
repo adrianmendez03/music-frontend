@@ -10,13 +10,13 @@ const Home = props => {
     const renderAlbums = () => {
         return albums.map((album, index) => {
             return (
-                <div className="album" key={index}>
+                <Link to={`/albums/edit/${album._id}`} className="album" key={index}>
                     <div className="image" style={{background: `url(${album.image})`, backgroundSize: 'contain'}}></div>
                     <div className="subtext">
                         <div className="title">{album.title}</div>
                         <div className="artist">{album.artist?.name}</div>
                     </div>
-                </div>
+                </Link>
             )
         })
     }
@@ -24,12 +24,12 @@ const Home = props => {
     const renderArtists = () => {
         return artists.map((artist, index) => {
             return (
-                <div className="artist" key={index}>
+                <Link to={`/artists/edit/${artist._id}`}className="artist" key={index}>
                     <div className="image" style={{background: `url(${artist.image})`, backgroundSize: 'contain'}}></div>
                     <div className="subtext">
                         <div className="name">{artist.name}</div>
                     </div>
-                </div>
+                </Link>
             )
         })
     }

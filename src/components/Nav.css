@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+}

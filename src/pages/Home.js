@@ -14,7 +14,7 @@ const Home = props => {
                     <div className="image" style={{background: `url(${album.image})`, backgroundSize: 'contain'}}></div>
                     <div className="subtext">
                         <div className="title">{album.title}</div>
-                        <div className="artist">{album.artist.name}</div>
+                        <div className="artist">{album.artist?.name}</div>
                     </div>
                 </div>
             )

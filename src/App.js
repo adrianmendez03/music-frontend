@@ -37,10 +37,10 @@ function App() {
       <main className="main-container">
         <Switch>
           <Route exact path="/" render={routerProps => <Home {...routerProps} albums={albums} artists={artists}/>}/>
-          <Route exact path="/albums/add" render={renderProps => <Add data="album"/>}/>
-          <Route exact path="/albums/edit" render={renderProps => <Edit data="album"/>}/>
-          <Route exact path="/artists/add" render={renderProps => <Add data="artist"/>}/>
-          <Route exact path="/artists/edit" render={renderProps => <Edit data="artist"/>}/>
+          <Route exact path="/albums/add" render={renderProps => <Add url={url} getData={getAlbums} data="album"/>}/>
+          <Route exact path="/albums/edit" render={renderProps => <Edit url={url} getData={getAlbums} data="album"/>}/>
+          <Route exact path="/artists/add" render={renderProps => <Add url={url} getData={getArtist} data="artist"/>}/>
+          <Route exact path="/artists/edit" render={renderProps => <Edit url={url} getData={getArtist} data="artist"/>}/>
         </Switch>
       </main>
     </div>

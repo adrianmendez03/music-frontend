@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import Home from './pages/Home'
+import Add from './pages/Add'
+import Edit from './pages/Edit'
 import Nav from './components/Nav'
 
 function App() {
@@ -35,6 +37,10 @@ function App() {
       <main className="main-container">
         <Switch>
           <Route exact path="/" render={routerProps => <Home {...routerProps} albums={albums} artists={artists}/>}/>
+          <Route exact path="/albums/add" render={renderProps => <Add data="album"/>}/>
+          <Route exact path="/albums/edit" render={renderProps => <Edit data="album"/>}/>
+          <Route exact path="/artists/add" render={renderProps => <Add data="artist"/>}/>
+          <Route exact path="/artists/edit" render={renderProps => <Edit data="artist"/>}/>
         </Switch>
       </main>
     </div>

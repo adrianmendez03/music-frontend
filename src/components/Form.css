@@ -1,0 +1,20 @@
+#form .input {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#form .input label {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#form button {
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
